@@ -28,10 +28,16 @@
         <jaxen.version>1.1.6</jaxen.version>
         <lombok.version>1.16.10</lombok.version>
         <cglib.version>3.2.7</cglib.version>
+        <asm-all.version>5.0.4</asm-all.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-all</artifactId>
+                <version>${asm-all.version}</version>
+            </dependency>
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
