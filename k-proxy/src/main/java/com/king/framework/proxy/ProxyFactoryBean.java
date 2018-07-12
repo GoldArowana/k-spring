@@ -42,12 +42,14 @@ public class ProxyFactoryBean {
             e.printStackTrace();
             throw new RuntimeException(proxyInterface + "找不到，请注意填写正确");
         }
+
         // JDK方式生成的代理对象
         Object proxyInstance = Proxy.newProxyInstance(clazz.getClassLoader(), new Class[]{clazz},
                 new InvocationHandler() {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         Object result = interceptor.intercept(target, method, args, null);
+//                        Object result = method.invoke(target,args);
                         return result;
                     }
                 });

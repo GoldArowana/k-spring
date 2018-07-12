@@ -16,7 +16,7 @@
         <property name="target" ref="userDao"/>
 
         <!-- 代理要实现的接口 -->
-        <!--<property name="proxyInterface" value="com.king.framework.aop.dao.UserDao" /> -->
+        <property name="proxyInterface" value="com.king.framework.aop.dao.UserDao"/>
 
         <!-- 需要织入目标的通知 -->
         <property name="interceptor" ref="beforeAdvice"/>
