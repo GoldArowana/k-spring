@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean name="Programmer" class="com.king.framework.ioc.bean.Programmer">
+        <property name="name" value="king"/>
+        <property name="computer" ref="Computer"/>
+    </bean>
+
+    <bean name="Computer" class="com.king.framework.ioc.bean.Computer" scope="prototype">
+        <property name="brand" value="MacBook"/>
+        <property name="price" value="13000"/>
+    </bean>
+</beans>
